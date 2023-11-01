@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Descry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="../static/images/Spotify_favicon.png" type="image/x-icon">
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</head>
+
+<body class="{{ background_class }}">
+
+    <div class="topbar">
+        <div class="logo">
+            <a href="http://127.0.0.1:5000">
+                <img src="../static/images/Spotify Logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:5000/recomendation">
+                        <span class="fa fa-home"></span>
+                        <span>Recommended Songs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5000/ai" id="ai-search">
+                        <span class="fa fa-search"></span>
+                        <span>AI Explorer</span>
+
+                    </a>
+                </li>
+            </ul>
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:5000/">Log out</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <div class="spotify-playlists">
+        <h5>Spotify Descry</h5>
+        <div class="list">
+            {% for item in playlist[:7] %}
+            <div class="item">
+                <a href="{{ item.link }}" style="text-decoration: none;" target="_blank">
+                    <img src="{{ item.image_src }}" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>{{ item.name }}</h4>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <div class="spotify-playlists">
+        <div class="list">
+            {% for item in playlist[7:14] %}
+            <div class="item">
+                <a href="{{ item.link }}" style="text-decoration: none;" target="_blank">
+                    <img src="{{ item.image_src }}" />
+                    <div class="play">
+                        <span class="fa fa-play"></span>
+                    </div>
+                    <h4>{{ item.name }}</h4>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+
+    <script src="https://kit.fontawesome.com/ef9a692198.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

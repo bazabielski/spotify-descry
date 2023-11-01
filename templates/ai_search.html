@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify Descry</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="shortcut icon" href="../static/images/Spotify_favicon.png" type="image/x-icon">
+
+</head>
+
+<body class="{{ background_class }}">
+
+    <div class="topbar">
+        <div class="logo">
+            <a href="http://127.0.0.1:5000">
+                <img src="../static/images/Spotify Logo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="navbar">
+            <ul>
+                <li>
+                    <a href="http://127.0.0.1:5000/recomendation">
+                        <span class="fa fa-home"></span>
+                        <span>Recommended Songs</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://127.0.0.1:5000/ai">
+                        <span class="fa fa-search"></span>
+                        <span>AI Explorer</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div class="chatbot">
+        <header>
+            <h3>AI Music Helper</h3>
+        </header>
+        <div class="chat-messages-container">
+            <ul class="chatbox">
+                <li class="chat incoming">
+                    <p>Hi there! <br> How can I help you today?</p>
+                </li>
+                <li class="chat-input">
+                    <input type="text" id="user-input" placeholder="Enter a message..." required />
+                    <span id="send-btn">send</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='script2.js') }}"></script>
+    <script src="https://kit.fontawesome.com/ef9a692198.js" crossorigin="anonymous"></script>
+</body>
+
+</html>

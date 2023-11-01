@@ -1,0 +1,326 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;1,200;1,300;1,400;1,500&family=Quicksand:wght@300;400;500;600;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body.background-with-image {
+    background-color: #121212;
+    background-image: url("./images/Spotify-Wrapped-2022-header.jpg");
+
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Montserrat', sans-serif;
+}
+
+body.background-no-image {
+    background-color: #121212;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.main-container {
+    margin-left: auto;
+    margin-bottom: 100px;
+}
+
+.topbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+    padding: 14px 30px;
+}
+
+.topbar .logo img {
+    width: 250px;
+}
+
+.topbar .navbar {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+}
+
+.topbar .navbar ul {
+    list-style: none;
+    margin-top: 5px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.topbar .navbar ul li {
+    padding: 10px 20px;
+}
+
+
+.topbar .navbar ul li a {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 18px;
+}
+
+.topbar .navbar ul li .fa {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.topbar .navbar ul li a:hover {
+    color: #ffffff;
+}
+
+.topbar .navbar button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.topbar .navbar button:hover {
+    background-color: #f2f2f2;
+}
+
+.spotify-playlists {
+    padding: 20px 40px;
+}
+
+.spotify-playlists h2 {
+    color: #3d4ebf;
+    font-size: 125px;
+    margin-bottom: 20px;
+
+
+}
+
+
+.spotify-playlists h5 {
+    color: #ffffff;
+    font-size: 125px;
+    margin-bottom: 20px;
+    opacity: 0.6;
+}
+
+.spotify-playlists .list {
+    margin-left: 200px;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+}
+
+.spotify-playlists .list .item {
+    min-width: 140px;
+    width: 160px;
+    padding: 15px;
+    background-color: #181818;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all ease 0.4s;
+}
+
+.spotify-playlists .list .item:hover {
+    background-color: #252525;
+}
+
+
+
+.spotify-playlists .list .item img {
+    width: 100%;
+    border-radius: 6px;
+    margin-bottom: 10px;
+}
+
+.spotify-playlists .list .item .play {
+    position: relative;
+}
+
+.spotify-playlists .list .item .play .fa {
+    position: absolute;
+    right: 10px;
+    top: -60px;
+    padding: 18px;
+    background-color: #1db954;
+    border-radius: 100%;
+    opacity: 0;
+
+    transition: all ease 0.4s;
+}
+
+.spotify-playlists .list .item:hover .play .fa {
+    opacity: 1;
+    transform: translateY(-20px);
+}
+
+.spotify-playlists .list .item h4 {
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-weight: 600;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    ;
+
+}
+
+.spotify-playlists .list .item p {
+    color: #989898;
+    font-size: 12px;
+    line-height: 20px;
+    font-weight: 500;
+
+}
+
+.spotify-playlists hr {
+    margin: 70px 0px 0px;
+    border-color: #636363;
+
+}
+
+.preview {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(to right, #ae2896, #509bf5);
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    width: 97%;
+}
+
+.preview h6 {
+    color: #ffffff;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.preview p {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.preview button {
+    background-color: #ffffff;
+    color: #000000;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 14px 30px;
+    border: 0px;
+    border-radius: 40px;
+    cursor: pointer;
+
+
+
+}
+
+.chatbot {
+    position: center;
+    right: 40px;
+    bottom: 120px;
+    width: 1100px;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 128px 0 rgba(0, 0, 0, 0, 1),
+        0 32px 64px -48px rgba(0, 0, 0, 0, 5);
+    margin-left: 400px;
+
+}
+
+.chatbot header {
+    background: #1ed760;
+    padding: 16px 0;
+    text-align: center;
+}
+
+.chatbot header h3 {
+    color: #000;
+    font-size: 1.4rem;
+}
+
+.chatbox {
+    overflow-y: auto;
+    padding: 10px 20px 0px;
+}
+
+.chatbox .chat {
+    display: flex;
+}
+
+.chatbox .chat p {
+    color: #000;
+    font-size: 0.95rem;
+    padding: 12px 16px;
+    border-radius: 10px 10px 0 10px;
+    background: #1ed760;
+}
+
+.chatbot .outgoing {
+    margin: 20px 0;
+    justify-content: flex-end;
+}
+
+.chatbox .incoming p {
+    margin-bottom: 20px;
+    color: #000;
+    background: #f2f2f2;
+    border-radius: 10px 10px 10px 0;
+
+}
+
+.chatbot .chat-input {
+    position: absolute;
+    bottom: 0;
+    width: 53%;
+    gap: 5px;
+    display: flex;
+    background: #fff;
+    padding: 5px 20px;
+    border-top: 1px solid #ccc;
+    border-radius: 30px;
+}
+
+.chat-input input {
+    height: 55px;
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 0.95rem;
+    resize: none;
+    padding: 16px 15px 16px 0;
+    border-radius: 20px;
+}
+
+.chat-input span {
+    color: #1ed760;
+    font-size: 1.35rem;
+    cursor: pointer;
+    align-self: center;
+    height: 70px;
+    line-height: 55px;
+    visibility: hidden;
+}
+
+.chat-input input:valid~span {
+    visibility: visible;
+}
+
+.chat-messages-container {
+    height: 700px;
+    overflow-y: auto;
+    padding: 10px 20px 0;
+    max-height: 700px;
+
+}
