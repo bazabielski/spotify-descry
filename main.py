@@ -15,7 +15,7 @@ app.secret_key = "33d543126-671j0-132-r432-1o9543879"
 openai.api_key = "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"
 CLIENT_ID = '830fb209bc8b452bb337ab47f6eca95b'
 CLIENT_SECRET = '62cde0ae0c7845b5bf0a4d4d2bd1695c'
-REDIRECT_URL = "http://127.0.0.1:5000/callback"
+REDIRECT_URL = "https://spotify-descry.onrender.com/callback"
 
 
 AUTH_URL = "https://accounts.spotify.com/authorize"
